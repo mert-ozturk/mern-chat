@@ -15,7 +15,7 @@ function Sidebar() {
        
     </ListGroup>
     <h2>Members</h2>
-    
+            
     </>
   )
 }
