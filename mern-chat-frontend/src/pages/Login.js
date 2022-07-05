@@ -8,8 +8,11 @@ import { useState } from "react";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-
+ 
+function handleLogin(e){
+  e.preventDevault();
+  //login logic
+}
 
   return (
     <Container>
@@ -27,6 +30,7 @@ function Login() {
                 placeholder="Enter email"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
+                required
               />
               <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
@@ -40,6 +44,7 @@ function Login() {
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
+                required
               />
             </Form.Group>
  
